@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Flask App</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('query') }}">Simple Query</a></li>
+            <li><a href="{{ url_for('query2') }}">Better Query</a></li>
+            <li><a href="{{ url_for('query3') }}">Query 3</a></li>
+            <li><a href="{{ url_for('insert') }}">Insert Address</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <p>This is the start page of the demo application.</p>
+    </div>
+</body>
+</html>
+

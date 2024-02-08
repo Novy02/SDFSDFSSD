@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Address</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Edit Address</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('query2') }}">Better Query</a></li>
+            <li><a href="{{ url_for('query3') }}">Query 3</a></li>
+            <li><a href="{{ url_for('insert') }}">Insert Address</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <form method="post" action="{{ url_for('edit', address_id=row[0]) }}">
+            <label for="addressline1">Address Line 1:</label>
+            <input type="text" name="addressline1" value="{{ row[1] }}" required><br>
+            <label for="city">City:</label>
+            <input type="text" name="city" value="{{ row[2] }}" required><br>
+            <div class="button-container">
+                <button type="submit">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
